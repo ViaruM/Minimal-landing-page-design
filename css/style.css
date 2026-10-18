@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: #0000ff;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #18191f;
+}
+
+.container {
+	max-width: 1480px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+/* Header */
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 22px 0;
+}
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+.header__login-login {
+	margin-right: 34px;
+	font-weight: 500;
+	font-size: 14px;
+	color: #4caf4f;
+}
+.header__login-signup {
+	color: #fff;
+	background-color: #4caf4f;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 20px;
+}
+
+@media (max-width: 992px) {
+	.header__inner {
+		flex-direction: column; /* Выстраиваем Логотип, Меню и Кнопки друг под друга вертикально */
+		gap: 20px; /* Задаем расстояние между ними */
+		text-align: center;
+	}
+
+	.nav__list {
+		flex-wrap: wrap; /* Если ссылки не влезают в одну строку на телефоне, они перенесутся на вторую */
+		justify-content: center;
+		gap: 20px; /* Уменьшаем расстояние между ссылками для экономии места */
+	}
+
+	.header__login {
+		margin-top: 10px; /* Немного отделяем блок входа от меню */
+	}
+}
+
+/* Intro */
+.intro__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: clamp(20px, calc(4px + 5vw), 100px);
+	padding: clamp(20px, calc(4px + 5vw), 100px)
+		clamp(10px, -18px + 8.75vw, 150px);
+}
+@media (max-width: 992px) {
+	.intro__inner {
+		flex-direction: column;
+	}
+	.intro__img-wrapper {
+		order: 1;
+		margin-bottom: 30px;
+	}
+	.intro__content {
+		order: 2;
+	}
+}
+@media (max-width: 768px) {
+	.intro__img {
+		width: clamp(200px, calc(63.571px + 42.634vw), 391px);
+	}
+	.intro__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+.intro__content {
+	max-width: 660px;
+}
+.intro__title {
+	font-size: clamp(1.75rem, calc(1rem + 2.5vw), 4rem);
+	font-weight: 600;
+	color: #4d4d4d;
+	margin-bottom: 16px;
+}
+.intro__title--green {
+	color: #4caf4f;
+}
+.intro__text {
+	color: #717171;
+	font-size: clamp(0.813rem, calc(0.775rem + 0.188vw), 1rem);
+	margin-bottom: clamp(19px, calc(13.6px + 1.688vw), 46px);
+}
+.intro__button {
+	color: #fff;
+	background-color: #4caf4f;
+	padding: clamp(12px, calc(6.8px + 0.375vw), 14px)
+		clamp(16px, calc(12.8px + 1vw), 32px);
+	border-radius: 4px;
+}
+.intro__slider {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 15px;
+}
+.intro__slider-item {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: rgba(76, 175, 79, 0.3);
+}
+
+.intro__slider-item--active {
+	background-color: rgba(76, 175, 79, 1);
+}
+/* Clients */
+.clients {
+	padding: 40px 0;
+}
+.clients__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Выравнивает элементы по центру горизонтально (по поперечной оси) */
+}
+.clients__title {
+	font-size: clamp(1.5rem, calc(1.05rem + 1vw), 2.25rem);
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #4d4d4d;
+}
+.clients__subtitle {
+	font-size: clamp(0.813rem, calc(0.775rem + 0.188vw), 1rem);
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 40px;
+	color: #717171;
+}
+.clients__images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: clamp(30px, calc(8.8px + 6.625vw), 136px);
+}
+.client__img {
+	max-width: 100%;
+	height: 100%;
+}
+/* Community */
+.community {
+	padding-bottom: clamp(40px, calc(26px + 4.375vw), 110px);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.community__text-wrapper {
+	max-width: 540px;
+	margin: 0 auto;
+	text-align: center;
+}
+.community__title {
+	font-size: clamp(1.5rem, calc(1.05rem + 1vw), 2.25rem);
+	font-weight: 600;
+	color: #4d4d4d;
+	margin-bottom: 8px;
+}
+.community__subtitle {
+	font-size: clamp(0.813rem, calc(0.775rem + 0.188vw), 1rem);
+	color: #717171;
+	margin-bottom: 16px;
+}
+.community__cards-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: clamp(30px, calc(10.6px + 6.063vw), 127px);
+}
+.community__card {
+	flex-basis: 299px;
+	box-shadow: 0 2px 4px 0 rgba(171, 190, 209, 0.2);
+	padding: 24px 32px;
+	background: #fff;
+}
+.community__card-img {
+	margin-bottom: 16px;
+}
+.community__card-title {
+	font-size: clamp(1.125rem, calc(1rem + 0.625vw), 1.75rem);
+	font-weight: 700;
+	color: #4d4d4d;
+	padding: 8px;
+	max-width: 12ch;
+	margin: 0 auto;
+	text-align: center;
+}
+.community__card-text {
+	font-size: clamp(0.75rem, calc(0.725rem + 0.125vw), 0.875rem);
+	color: #717171;
+}
