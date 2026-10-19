@@ -74,6 +74,9 @@ body {
 }
 
 /* Intro */
+.intro {
+	background-color: #f5f7fa;
+}
 .intro__inner {
 	display: flex;
 	justify-content: space-between;
@@ -134,6 +137,7 @@ body {
 	justify-content: center;
 	gap: 8px;
 	margin-top: 15px;
+	padding-bottom: 16px;
 }
 .intro__slider-item {
 	height: 10px;
@@ -164,13 +168,14 @@ body {
 	font-size: clamp(0.813rem, calc(0.775rem + 0.188vw), 1rem);
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: 40px;
+	margin-bottom: 16px;
 	color: #717171;
 }
 .clients__images {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 25px;
 	flex-wrap: wrap;
 	gap: clamp(30px, calc(8.8px + 6.625vw), 136px);
 }
@@ -229,3 +234,5 @@ body {
 	font-size: clamp(0.75rem, calc(0.725rem + 0.125vw), 0.875rem);
 	color: #717171;
 }
+
+/* promo-section */
